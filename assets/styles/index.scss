@@ -1,0 +1,111 @@
+$base-color1: #566270;
+$base-color2: #FDD692;
+$base-color3: #EFE8D8;
+$base-color4: #FE4552;
+$base-color5: #E54B4B;
+$base-color6: #FFF;
+
+html, body {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+nav {
+  background: #ff6600;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  ul {
+    li {
+      display: inline-block;
+      a {
+        color: #000;
+        font-size: 14px;
+        &.active {
+          color: #fff;
+        }
+      }
+      &:after {
+        content: '|';
+        padding: 0 5px 0 7px;
+        position: relative;
+      }
+    }
+  }
+}
+
+
+#content {
+  li {
+    margin-bottom: 20px;
+    vertical-align: top;
+    
+    span {
+      display: inline-block;
+    }
+    .count {
+      width: 20px;
+      padding-right: 5px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .title {
+      a {
+        color: #000;
+      }
+    }
+
+    .sitebit {
+      font-size: 11px;
+      color: #666;
+      a {
+        color: #666;
+      }
+    }
+
+    .subtext {
+      margin: 5px 0 0 25px;
+      font-size: 11px;
+      color: #666;
+      a {
+        color: #777;
+      }
+    }
+  }
+}
+
+.more {
+  border: none;
+  background: #fff;
+  font-size: 14px;
+  color: #000;
+}

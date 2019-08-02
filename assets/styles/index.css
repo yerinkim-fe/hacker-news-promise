@@ -1,0 +1,109 @@
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: #ff6600;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+nav h1 {
+  margin: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 14px;
+}
+
+nav ul li a.active {
+  color: #fff;
+}
+
+nav ul li:after {
+  content: '|';
+  padding: 0 5px 0 7px;
+  position: relative;
+}
+
+#content li {
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+#content li span {
+  display: inline-block;
+}
+
+#content li .count {
+  width: 20px;
+  padding-right: 5px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#content li .title a {
+  color: #000;
+}
+
+#content li .sitebit {
+  font-size: 11px;
+  color: #666;
+}
+
+#content li .sitebit a {
+  color: #666;
+}
+
+#content li .subtext {
+  margin: 5px 0 0 25px;
+  font-size: 11px;
+  color: #666;
+}
+
+#content li .subtext a {
+  color: #777;
+}
+
+.more {
+  border: none;
+  background: #fff;
+  font-size: 14px;
+  color: #000;
+}
