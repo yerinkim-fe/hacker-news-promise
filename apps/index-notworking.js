@@ -1,11 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const $nav = document.querySelector('nav');
   const $more = document.querySelector('.more');
   const $content = document.getElementById('content');
   const base = 'https://news.ycombinator.com/';
   const getArticleUrl = articleID => `https://hacker-news.firebaseio.com/v0/${articleID}.json`;
   const getItemUrl = itemID => `https://hacker-news.firebaseio.com/v0/item/${itemID}.json`;
-  const count = { start: 0, end: 30, times: 1 };
+  const count = {
+    start: 0,
+    end: 30,
+    times: 1
+  };
   let listLength = 30;
   let prevTarget;
   let rank = 1;
@@ -24,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   };
 
-  function getItems (i) {
+  function getItems(i) {
     console.log(`i: ${i}`);
     count.times = 0;
     rank = 1;
@@ -33,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     articleDetailPromise(i)
       .then(articleData => {
-        // 변하지 않는다? 한번 then 메서드를 실행하면 articleData도 쌓이는 구조?????
-        function iterator (start, end) {
+        function iterator(start, end) {
           const list = articleData.slice(start, end);
           let newContent = '';
           let site;
@@ -130,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 
-  getItems(3);
+  getItems(0);
 
   $nav.addEventListener('click', ev => {
     ev.preventDefault();
